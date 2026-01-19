@@ -1,0 +1,742 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: #000;
+    color: #fff;
+    line-height: 1.6;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 32px;
+    background: #050814;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #4cff4c;
+    font-weight: bold;
+}
+
+.logo img {
+    height: 34px;
+}
+
+/* NAV DESKTOP */
+.nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+
+
+
+/* HERO */
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* gambar background */
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+/* overlay */
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 1;
+}
+
+/* konten */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+    max-width: 900px;
+    padding: 20px;
+}
+
+.hero-bg {
+    animation: slowZoom 20s ease-in-out infinite alternate;
+}
+
+.hero h2 {
+    font-size: 30px;
+    color: #4cff4c;
+}
+.hero h1 {
+    font-size: 56px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 20px;
+    opacity: 0.8;
+}
+
+.hero-btn {
+    margin-top: 28px;
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.hero .hero-btn .btn {
+    width: auto !important;
+    min-width: unset !important;
+    max-width: fit-content;
+    padding: 12px 32px;
+    border-radius: 28px;
+    font-size: 15px;
+    font-weight: 500;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* primary button */
+.btn.primary {
+    background: linear-gradient(135deg, #4cff4c, #2fdc2f);
+    color: #000;
+    box-shadow: 0 0 25px rgba(76, 255, 76, 0.45);
+}
+
+.btn.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 40px rgba(76, 255, 76, 0.75);
+}
+
+/* secondary button */
+.btn.secondary {
+    background: transparent;
+    border: 2px solid #4cff4c;
+    color: #4cff4c;
+}
+
+.btn.secondary:hover {
+    background: rgba(76, 255, 76, 0.15);
+    transform: translateY(-2px);
+}
+
+
+.secondary {
+    border: 2px solid #4cff4c;
+    color: #4cff4c;
+}
+
+.hero .btn.primary {
+    background: #4cff4c;
+    color: #000;
+}
+
+/*  about */
+.about-section h2{
+    color: #4cff4c;
+}
+.about-section {
+    text-align: center;
+}
+
+.about-logo {
+    margin-bottom: 20px;
+}
+
+.about-logo img {
+    width: 35%;
+    height: auto;
+    filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.6));
+    transition: transform 0.3s ease;
+}
+
+.about-logo img:hover {
+    transform: scale(1.08) rotate(2deg);
+}
+
+
+/* SECTION */
+.section {
+    padding: 100px 20px;
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.dark {
+    background: #0b0f1a;
+    max-width: 100%;
+}
+.tokenomics-section h2{
+    color: #4cff4c;
+}
+.tokenomics-section {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.tokenomics-desc {
+    margin-bottom: 40px;
+    opacity: 0.85;
+}
+
+.tokenomics-item {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.tokenomics-item span {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.progress {
+    width: 100%;
+    height: 14px;
+    background: #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    border-radius: 10px;
+    animation: loadBar 1.5s ease forwards;
+}
+
+/* Progress Values */
+.liquidity { width: 40%; background: linear-gradient(90deg, #ffd700, #ffae00); }
+.community { width: 25%; background: linear-gradient(90deg, #00ffa2, #00c97a); }
+.development { width: 15%; background: linear-gradient(90deg, #00c6ff, #0072ff); }
+.marketing { width: 10%; background: linear-gradient(90deg, #ff6a00, #ff3d00); }
+.team { width: 10%; background: linear-gradient(90deg, #b36bff, #6a00ff); }
+
+@keyframes loadBar {
+    from { width: 0; }
+}
+
+
+/* roadmap */
+.roadmap-section h2{
+    color: #4cff4c;
+}
+.roadmap-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.roadmap-subtitle {
+    margin-bottom: 40px;
+    opacity: 0.8;
+}
+
+.roadmap-horizontal {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    overflow-x: auto;
+    padding-bottom: 20px;
+    scrollbar-width: thin;
+}
+
+.roadmap-horizontal::-webkit-scrollbar {
+    height: 6px;
+}
+
+.roadmap-horizontal::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg, #ffd700, #ff6a00);
+    border-radius: 10px;
+}
+
+.roadmap-card {
+    min-width: 260px;
+    max-width: 260px;
+    background: #0f0f0f;
+    border-radius: 18px;
+    padding: 25px 20px;
+    text-align: left;
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.roadmap-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 35px rgba(255, 215, 0, 0.3);
+}
+
+.phase {
+    display: inline-block;
+    background: linear-gradient(90deg, #ffd700, #ffae00);
+    color: #000;
+    font-weight: bold;
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.roadmap-card h3 {
+    color: #00c97a;
+    margin: 10px 0 15px;
+}
+
+.roadmap-card ul {
+    padding-left: 18px;
+}
+
+.roadmap-card ul li {
+    margin-bottom: 8px;
+    opacity: 0.9;
+}
+
+/* =========================
+   ROADMAP - NO HORIZONTAL SCROLL
+========================= */
+@media (max-width: 768px) {
+
+    .roadmap-horizontal {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        overflow-x: hidden;
+        padding-bottom: 0;
+    }
+
+    .roadmap-card {
+        min-width: auto;
+        max-width: 100%;
+        padding: 18px 16px;
+        border-radius: 16px;
+        text-align: left;
+    }
+
+    .roadmap-card:hover {
+        transform: none;
+        box-shadow: 0 0 18px rgba(255, 215, 0, 0.12);
+    }
+}
+
+
+/* =========================
+   EXCHANGE SECTION
+========================= */
+.exchange-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        circle at center,
+        rgba(0,255,120,0.08),
+        rgba(0,0,0,0.95) 70%
+    );
+    z-index: -1;
+}
+
+
+.exchange-section h2 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.exchange-subtitle {
+    color: #aaa;
+    margin-bottom: 60px;
+}
+
+/* =========================
+   CARD LAYOUT
+========================= */
+
+
+.exchange-slider {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.exchange-card {
+    width: 320px;
+    padding: 40px 30px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 40px rgba(0,0,0,0.6);
+    transition: all 0.4s ease;
+}
+
+.exchange-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 60px rgba(0,255,120,0.2);
+}
+
+/* =========================
+   LOGO
+========================= */
+.exchange-logo {
+    width: 70px;
+    margin-bottom: 20px;
+}
+
+/* =========================
+   CA BOX
+========================= */
+.ca-box {
+    background: #000;
+    border: 1px solid #1aff6a;
+    border-radius: 12px;
+    padding: 12px;
+    margin: 20px 0 30px;
+    font-size: 13px;
+}
+
+.ca-box span {
+    display: block;
+    color: #aaa;
+    margin-bottom: 6px;
+}
+
+.ca-box code {
+    color: #1aff6a;
+    word-break: break-all;
+}
+
+.ca-box {
+    margin: 20px 0;
+    padding: 14px;
+    border: 1px solid #2cff2c;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    background: rgba(0,0,0,0.6);
+}
+
+.ca-box:hover {
+    background: rgba(0,255,120,0.08);
+    box-shadow: 0 0 15px rgba(0,255,120,0.3);
+}
+
+.ca-box span {
+    display: block;
+    font-size: 12px;
+    opacity: 0.7;
+    margin-bottom: 6px;
+}
+
+.ca-box code {
+    color: #4cff4c;
+    font-size: 14px;
+    word-break: break-all;
+}
+
+.copy-text {
+    display: block;
+    margin-top: 6px;
+    font-size: 11px;
+    opacity: 0.6;
+}
+
+/* =========================
+   BUTTON BASE (WAJIB)
+========================= */
+.btn {
+    display: inline-block;
+    width: 100%;
+    padding: 14px 0;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* =========================
+   PRIMARY BUTTON (PHANTOM)
+========================= */
+.btn.primary {
+    background: transparent;
+    color: #1aff6a;
+    border: 2px solid #1aff6a;
+}
+
+.btn.primary:hover {
+    background: #1aff6a;
+    color: #000;
+    box-shadow: 0 0 40px rgba(26,255,106,0.8);
+    transform: translateY(-2px);
+}
+
+/* =========================
+   OUTLINE BUTTON (PUMP.FUN)
+========================= */
+.btn.outline {
+    background: transparent;
+    color: #1aff6a;
+    border: 2px solid #1aff6a;
+}
+
+.btn.outline:hover {
+    background: #1aff6a;
+    color: #000;
+    box-shadow: 0 0 40px rgba(26,255,106,0.8);
+    transform: translateY(-2px);
+}
+
+
+
+/* comunity */
+
+.community-section {
+    text-align: center;
+    padding: 100px 20px;
+    background: radial-gradient(circle at top, #0b0f1a, #000);
+    color: #fff;
+}
+
+.community-section p {
+    margin-bottom: 50px;
+    opacity: 0.8;
+}
+
+.social-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.social-card {
+    width: 180px;
+    height: 160px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.social-card img {
+    width: 80px;
+    height: 80px;
+}
+
+.social-card span {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Hover Effect */
+.social-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 0 30px rgba(0,255,255,0.3);
+}
+
+/* Warna spesifik */
+.telegram:hover {
+    box-shadow: 0 0 30px #1aff6a;
+}
+
+.twitter:hover {
+    box-shadow: 0 0 30px #1aff6a;
+}
+
+.discord:hover {
+    box-shadow: 0 0 30px #1aff6a;
+}
+
+
+/* FOOTER */
+footer {
+    padding: 20px;
+    text-align: center;
+    background: #000;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+/* =========================
+   MOBILE RESPONSIVE (FINAL)
+========================= */
+@media (max-width: 768px) {
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+        min-height: 100vh;
+        padding: 0 16px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .hero h2 {
+        font-size: 18px;
+        letter-spacing: 2px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+        line-height: 1.3;
+        margin-bottom: 10px;
+    }
+
+    .hero p {
+        font-size: 15px;
+        line-height: 1.6;
+        opacity: 0.85;
+    }
+
+    /* ===== HERO BUTTON (KIRI - KANAN) ===== */
+    .hero-btn {
+        display: flex;
+        flex-direction: row;          /* kiri - kanan */
+        justify-content: center;
+        gap: 14px;
+        margin-top: 26px;
+        padding: 0 6px;
+    }
+
+    .hero-btn .btn {
+        flex: 1;
+        max-width: 160px;             /* ukuran ideal mobile */
+        padding: 12px 0;
+        font-size: 14px;
+        border-radius: 26px;
+        text-align: center;
+    }
+
+    /* ===== NAVBAR MOBILE ===== */
+
+@media (max-width: 768px) {
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px 18px;
+        position: relative;
+        z-index: 999;
+    }
+
+    .nav-left {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-right {
+        display: flex;
+        align-items: center;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        z-index: 1000;
+    }
+
+    .hamburger span {
+        width: 26px;
+        height: 3px;
+        background: #ffffff;
+        border-radius: 2px;
+    }
+
+    /* menu dropdown */
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        background: #050814;
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+        padding: 24px 0;
+        transform: translateY(-120%);
+        transition: 0.35s ease;
+    }
+
+    .nav-links.active {
+        transform: translateY(0);
+    }
+}
+
+    /* ===== ROADMAP (VERTICAL / GRID) ===== */
+    .roadmap-horizontal {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        overflow-x: hidden;
+        padding-bottom: 0;
+    }
+
+    .roadmap-card {
+        min-width: auto;
+        max-width: 100%;
+        padding: 18px 16px;
+        border-radius: 16px;
+        text-align: left;
+    }
+
+    .roadmap-card:hover {
+        transform: none;
+        box-shadow: 0 0 18px rgba(255, 215, 0, 0.12);
+    }
+}
+
