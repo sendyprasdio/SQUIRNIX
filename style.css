@@ -28,7 +28,7 @@ nav {
 .logo {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
     color: #4cff4c;
     font-weight: bold;
 }
@@ -45,10 +45,28 @@ nav {
 }
 
 .nav-links a {
-    color: #fff;
+    position: relative;
+    color: #ffffff;
+    font-weight: 700;
     text-decoration: none;
-    font-weight: 500;
+    padding-bottom: 6px;
+
+    text-shadow: 0 0 6px rgba(255,255,255,0.4);
 }
+
+
+/* garis neon selalu nyala */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #4cff4c, #4cff4c);
+    box-shadow: 0 0 10px #00ff00(0,255,204,0.8);
+}
+
 
 
 
@@ -379,6 +397,7 @@ nav {
 
 
 .exchange-section h2 {
+    color: #4cff4c;
     font-size: 42px;
     margin-bottom: 10px;
 }
@@ -537,7 +556,9 @@ nav {
     background: radial-gradient(circle at top, #0b0f1a, #000);
     color: #fff;
 }
-
+.community-section h2{
+    color: #4cff4c
+}
 .community-section p {
     margin-bottom: 50px;
     opacity: 0.8;
@@ -604,6 +625,13 @@ footer {
     background: #000;
     font-size: 14px;
     opacity: 0.7;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+.section {
+    scroll-margin-top: 80px; /* sesuaikan tinggi navbar */
 }
 
 /* =========================
